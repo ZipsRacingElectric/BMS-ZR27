@@ -23,6 +23,7 @@ CSRC =	$(ALLCSRC)							\
 		src/peripherals/eeprom_map.c		\
 		src/peripherals/cell_balancing.c	\
 		src/peripherals/charging.c			\
+		src/peripherals/lamp_check.c		\
 											\
 		src/can_charger.c					\
 		src/can_vehicle.c					\

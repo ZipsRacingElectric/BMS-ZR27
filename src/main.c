@@ -27,6 +27,7 @@
 #include "peripherals.h"
 #include "watchdog.h"
 #include "vehicle_thread.h"
+#include "peripherals/lamp_check.h"
 
 // ChibiOS
 #include "hal.h"
@@ -65,6 +66,10 @@ int main (void)
 		while (true);
 	}
 
+	// Begin the Lamp Check sequence
+	// Note: Lamp check needs to be activiated within 1 second of GLVMS on (FSAE EV.6.3), (FHE EV9.3) 
+	lampCheckStart();
+
 	// Start the watchdog timer.
 	watchdogStart ();
 
@@ -94,7 +99,13 @@ int main (void)
 		chargerThreadStart (NORMALPRIO);
 	}
 
-	// Do nothing
+
 	while (true)
-		chThdSleepMilliseconds (500);
+	{
+		// Update the lamp check state
+		lampCheckUpdate();
+
+		// Sleep 10 miliseconds
+		chThdSleepMilliseconds (10);
+	}
 }

@@ -239,12 +239,12 @@
         Mode="Input"
         Alternate="0" />
       <pin11
-        ID=""
+        ID="LAMP_TEST_CTRL"
         Type="PushPull"
-        Level="High"
+        Level="Low"
         Speed="Minimum"
         Resistor="PullUp"
-        Mode="Input"
+        Mode="Output"
         Alternate="0" />
       <pin12
         ID=""
