@@ -1,4 +1,4 @@
-# ZR26 BMS Commissioning Guide
+# ZR27 BMS Commissioning Guide
 
 ## Setup
 
@@ -29,18 +29,18 @@ Program the microcontroller with the latest firmware.
 
 Using ZRE-CAN-Tools, program the device's EEPROM.
 
-- Using the `zr26-eeprom-vehicle` command, set the `WATCHDOG_ENABLED` bit to `0` to disable the watchdog.
+- Using the `zr27-eeprom-vehicle` command, set the `WATCHDOG_ENABLED` bit to `0` to disable the watchdog.
 
 - Navigate to the `ZRE_CANTOOLS_DIR` directory.
 - Run the below command (substituting the `<Device Name>` as nececssary).
 
 ```
-./bin/can-eeprom-cli -p=config/zr26/bms_data.json <Device Name> config/zr26/bms_config.json
+./bin/can-eeprom-cli -p=config/zr27/bms_data.json <Device Name> config/zr27/bms_config.json
 ```
 
 - This command should run with no errors. If it times out, you may need to program the fields manually.
 
-- Print the EEPROM map via the `zr26-eeprom-vehicle` command, option `m`.
+- Print the EEPROM map via the `zr27-eeprom-vehicle` command, option `m`.
 
 ### Shutdown Loop
 

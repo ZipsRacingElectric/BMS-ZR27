@@ -1,6 +1,6 @@
-# Battery Management System - Zips Racing ZR26
+# Battery Management System - Zips Racing ZR27
 
-Embedded firmware for the battery management system of ZR26. The BMS is responsible for monitoring:
+Embedded firmware for the battery management system of ZR27. The BMS is responsible for monitoring:
 
 - All series cell voltages
 - All sense line statuses (open circuit)

@@ -1,5 +1,5 @@
 # Project name
-PROJECT = bms_zr26
+PROJECT = bms_zr27
 
 # Imported files
 CHIBIOS  := $(CHIBIOS_SOURCE_PATH)
